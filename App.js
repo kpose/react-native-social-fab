@@ -15,7 +15,7 @@ export default function App() {
         <FloatingButton 
           onPressFacebook= { () => alert('facebook icon pressed')}
           onPressTwitter= { () => alert('Twitter icon pressed')}
-          onPressWhatsapp= { () => alert('whatsapp icon pressed')}
+          onPressInstagram= { () => alert('instagram icon pressed')}
           position= {{bottom: 100, right: 60}}
         />
     </View>

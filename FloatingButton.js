@@ -43,7 +43,7 @@ export default class FloatingButton extends Component {
       ]
     };
 
-    const whatsappStyle = {
+    const instagramStyle = {
       transform: [
         { scale: this.animation },
         {
@@ -75,19 +75,19 @@ export default class FloatingButton extends Component {
       <View style = {[styles.container, this.props.position]}>
       <TouchableWithoutFeedback onPress={this.props.onPressFacebook}>
             <Animated.View style ={[styles.button, styles.secondary, facebookStyle, opacity]}>
-                <FontAwesome5 name="facebook-f" size={24} color="#FFF" />
+                <FontAwesome5 name="facebook-f" size={24} color="#3b5998" />
             </Animated.View>
         </TouchableWithoutFeedback>
 
         <TouchableWithoutFeedback onPress={this.props.onPressTwitter}>
             <Animated.View style ={[styles.button, styles.secondary, twitterStyle, opacity]}>
-                <Entypo name="twitter" size={24} color="#FFF" />
+                <Entypo name="twitter" size={24} color="#1DA1F2" />
             </Animated.View>
         </TouchableWithoutFeedback>
 
-        <TouchableWithoutFeedback onPress={this.props.onPressWhatsapp}>
-            <Animated.View style ={[styles.button, styles.secondary, whatsappStyle, opacity]}>
-                <FontAwesome5 name="whatsapp" size={24} color="#FFF" />
+        <TouchableWithoutFeedback onPress={this.props.onPressInstagram}>
+            <Animated.View style ={[styles.button, styles.secondary, instagramStyle, opacity]}>
+                <AntDesign name="instagram" size={24} color="#cd486b" />
             </Animated.View>
         </TouchableWithoutFeedback>
 
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
       width: 48,
       height: 48,
       borderRadius: 48/2,
-      backgroundColor: "#7E9ADF"
+      backgroundColor: "#fff"
     },
     fab: {
       bottom: 100
