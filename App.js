@@ -1,10 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Image, View } from 'react-native';
+import FloatingButton from './FloatingButton';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+     <Image 
+        source = {require('./assets/background.jpg')} 
+        resizeMode="cover" 
+        style={{width: 500, height:900, opacity:0.5}}
+        />
+
+        <FloatingButton />
     </View>
   );
 }
@@ -12,8 +20,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: 'center'
   },
 });

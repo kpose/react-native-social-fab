@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "HelloWorld",
+    "name": "React-Native-FAB-iOS",
     "slug": "FAB_iOs",
     "platforms": [
       "ios",
