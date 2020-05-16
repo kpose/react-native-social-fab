@@ -1,12 +1,13 @@
 # react-native-floating-social-button
 
-[![Fully customizable material designed floating action button component for React Native.](https://img.shields.io/badge/-%20Fully%20customizable%20material%20designed%20floating%20action%20button%20component%20for%20React%20Native.-lightgrey)]
+![Fully customizable material designed floating action button component for React Native.](https://img.shields.io/badge/-%20Fully%20customizable%20material%20designed%20floating%20action%20button%20component%20for%20React%20Native.-lightgrey)
 
-[![Battle Tested ✅](https://img.shields.io/badge/-Battle--Tested%20%E2%9C%85-03666e?style=for-the-badge)]
+![Battle Tested ✅](https://img.shields.io/badge/-Battle--Tested%20%E2%9C%85-03666e?style=for-the-badge)
+[![Platform - iOS, Android, Web](https://img.shields.io/badge/platform-Android%20%7C%20iOS-blue.svg?style=for-the-badge)] [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-blue.svg?style=for-the-badge)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-
+<p align="center">
+<img alt="React Native Floating Social Button" src="https://github.com/kpose/react-native-floating-social-button/blob/master/assets/floatingbuttonexample.gif" width="49.7%"/>
+</p>
 
 ## Installation
 
