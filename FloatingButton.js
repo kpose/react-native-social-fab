@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet, Animated, TouchableWithoutFeedback } from 'react-native'
+import { Text, View, StyleSheet, Animated, TouchableWithoutFeedback, TouchableOpacity } from 'react-native'
 import {AntDesign, Entypo, FontAwesome5 } from '@expo/vector-icons';
 
 
@@ -72,20 +72,20 @@ export default class FloatingButton extends Component {
     })
 
     return (
-      <View style = {[styles.container, styles.fab]}>
-      <TouchableWithoutFeedback>
+      <View style = {[styles.container, this.props.position]}>
+      <TouchableWithoutFeedback onPress={this.props.onPressFacebook}>
             <Animated.View style ={[styles.button, styles.secondary, facebookStyle, opacity]}>
                 <FontAwesome5 name="facebook-f" size={24} color="#FFF" />
             </Animated.View>
         </TouchableWithoutFeedback>
 
-        <TouchableWithoutFeedback>
+        <TouchableWithoutFeedback onPress={this.props.onPressTwitter}>
             <Animated.View style ={[styles.button, styles.secondary, twitterStyle, opacity]}>
                 <Entypo name="twitter" size={24} color="#FFF" />
             </Animated.View>
         </TouchableWithoutFeedback>
 
-        <TouchableWithoutFeedback>
+        <TouchableWithoutFeedback onPress={this.props.onPressWhatsapp}>
             <Animated.View style ={[styles.button, styles.secondary, whatsappStyle, opacity]}>
                 <FontAwesome5 name="whatsapp" size={24} color="#FFF" />
             </Animated.View>
@@ -105,9 +105,8 @@ const styles = StyleSheet.create({
     container: {
       alignItems: 'center',
       position: "absolute",
-      right: 60,
-      
     },
+
     button: {
         position: "absolute",
         width: 60,
@@ -120,9 +119,11 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.5,
         shadowOffset: {height: 10 }
     },
+
     menu: {
         backgroundColor: "#4169E1",
     },
+    
     secondary: {
       width: 48,
       height: 48,

@@ -12,7 +12,12 @@ export default function App() {
         style={{width: 500, height:900, opacity:0.5}}
         />
 
-        <FloatingButton />
+        <FloatingButton 
+          onPressFacebook= { () => alert('facebook icon pressed')}
+          onPressTwitter= { () => alert('Twitter icon pressed')}
+          onPressWhatsapp= { () => alert('whatsapp icon pressed')}
+          position= {{bottom: 100, right: 60}}
+        />
     </View>
   );
 }
