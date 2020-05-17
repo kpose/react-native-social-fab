@@ -6,7 +6,7 @@
 [![Platform - iOS, Android, Web](https://img.shields.io/badge/platform-Android%20%7C%20iOS-blue.svg?style=for-the-badge)] [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 <p align="center">
-<img alt="React Native Floating Social Button" src="https://github.com/kpose/react-native-floating-social-button/blob/master/assets/floatingbuttonexample.gif" width="49.7%"/>
+<img alt="React Native Floating Social Button" src="https://github.com/kpose/react-native-floating-social-button/blob/master/assets/floatingbuttonexample.gif" width="200" height="432"/>
 </p>
 
 ## Installation
