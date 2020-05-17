@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet, Animated, TouchableWithoutFeedback, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, Animated, TouchableWithoutFeedback } from 'react-native'
 import {AntDesign, Entypo, FontAwesome5 } from '@expo/vector-icons';
 
 
@@ -12,7 +12,7 @@ export default class FloatingButton extends Component {
 
     Animated.spring(this.animation, {
       toValue,
-      friction: 5
+      friction: 10
     }).start();
 
     this.open = !this.open;
@@ -60,7 +60,7 @@ export default class FloatingButton extends Component {
         {
           rotate: this.animation.interpolate({
             inputRange: [0, 1],
-            outputRange: ["0deg", "45deg"]
+            outputRange: ["0deg", "360deg"]
           })
         }
       ]
@@ -93,7 +93,7 @@ export default class FloatingButton extends Component {
 
         <TouchableWithoutFeedback onPress = {this.toggleMenu}>
             <Animated.View style ={[styles.button, styles.menu, rotation]}>
-                <AntDesign name="plus" size={24} color="#FFF" />
+                <FontAwesome5 name="share-alt" size={24} color="#FFF" />
             </Animated.View>
         </TouchableWithoutFeedback>
       </View>
@@ -129,9 +129,5 @@ const styles = StyleSheet.create({
       height: 48,
       borderRadius: 48/2,
       backgroundColor: "#fff"
-    },
-    fab: {
-      bottom: 100
     }
   });
-  

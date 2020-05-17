@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Image, View } from 'react-native';
-import FloatingButton from './FloatingButton';
+import FloatingButton from "react-native-social-fab";
 
 
 export default function App() {

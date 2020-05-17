@@ -14,26 +14,26 @@
 Add the dependency:
 
 ```
-npm i xxx
+npm i react-native-social-fab
 ```
 
 or
 
 ```
-yarn add xxx
+yarn add react-native-social-fab
 ```
 
-## Example
+## Example Usage
 
-To execute the example using **Snack** open [Expo Snack link](https://snack.expo.io/@kpose/react-native-floating-social-button)
+To execute the example using **Snack** open [Expo Snack link](https://snack.expo.io/@kpose/react-native-social-fab)
 
 ## Peer Dependencies
 
 ##### IMPORTANT! You need install them.
 
 ```json
-"react": ">= 16.x",
-"react-native": ">= 0.55.x",
+ "react": "^16.0.0-beta.5",
+ "react-native": "^0.49.1"
 ```
 
 ## Basic Usage
@@ -41,7 +41,7 @@ To execute the example using **Snack** open [Expo Snack link](https://snack.expo
 **First step:** import the component:
 
 ```javascript
-import FloatingButton  from "xxx";
+import FloatingButton  from "react-native-social-fab";
 ```
 
 **Second step:** Use the button
@@ -57,8 +57,8 @@ import FloatingButton  from "xxx";
 
 ### Example Application
 
-- I just shared the example project on Expo, simply run on Apptizer to check what it is:
-  [via Expo](https://snack.expo.io/@kpose/react-native-floating-social-button)
+- I just shared the example project on Expo, simply run on Snack to check what it is:
+  [via Expo](https://snack.expo.io/@kpose/react-native-social-fab)
 
 ### Configuration - Props
 
@@ -66,9 +66,10 @@ import FloatingButton  from "xxx";
 
 | Property                    |   Type    |         Default          | Description                                                                                                                              |
 | --------------------------- | :-------: | :----------------------: | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| onPressFacebook            | function |      required     | function to be called when facebook icon is pressed |
-| onPressTwitter             | function |       required        | function to be called when twitter icon is pressed |
-| onPressInstagram           | function |          required           | function to be called when instagram icon is pressed |
+| onPressFacebook            | function |      -     | function to be called when facebook icon is pressed |
+| onPressTwitter             | function |       -       | function to be called when twitter icon is pressed |
+| onPressInstagram           | function |          -           | function to be called when instagram icon is pressed |
+| position                   | function |          `{bottom: 100, right: 60}`           | Style to update button position |
 
 ### ToDos
 
