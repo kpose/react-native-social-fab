@@ -3,11 +3,13 @@
 ![Fully customizable material designed floating action button component for React Native.](https://img.shields.io/badge/-%20Fully%20customizable%20material%20designed%20floating%20action%20button%20component%20for%20React%20Native.-lightgrey)
 
 ![Battle Tested ✅](https://img.shields.io/badge/-Battle--Tested%20%E2%9C%85-03666e?style=for-the-badge)
-[![Platform - iOS, Android, Web](https://img.shields.io/badge/platform-Android%20%7C%20iOS-blue.svg?style=for-the-badge)] [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Platform - Expo](https://img.shields.io/badge/platform-Android%20%7C%20iOS-blue.svg?style=for-the-badge)] [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 <p align="center">
 <img alt="React Native Floating Social Button" src="https://github.com/kpose/react-native-floating-social-button/blob/master/assets/floatingbuttonexample.gif" width="200" height="432"/>
 </p>
+
+#### This package is currently only maintained for Expo managed React Native projects, support for bare React Native projects is coming soon
 
 ## Installation
 
@@ -41,18 +43,18 @@ To execute the example using **Snack** open [Expo Snack link](https://snack.expo
 **First step:** import the component:
 
 ```javascript
-import FloatingButton  from "react-native-social-fab";
+import FloatingButton from "react-native-social-fab";
 ```
 
 **Second step:** Use the button
 
 ```jsx
-<FloatingButton 
-          onPressFacebook= { () => alert('facebook icon pressed')}
-          onPressTwitter= { () => alert('Twitter icon pressed')}
-          onPressInstagram= { () => alert('instagram icon pressed')}
-          position= {{bottom: 100, right: 60}}
-        />
+<FloatingButton
+  onPressFacebook={() => alert("facebook icon pressed")}
+  onPressTwitter={() => alert("Twitter icon pressed")}
+  onPressInstagram={() => alert("instagram icon pressed")}
+  position={{ bottom: 100, right: 60 }}
+/>
 ```
 
 ### Example Application
@@ -64,12 +66,12 @@ import FloatingButton  from "react-native-social-fab";
 
 **FloatingButton**
 
-| Property                    |   Type    |         Default          | Description                                                                                                                              |
-| --------------------------- | :-------: | :----------------------: | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| onPressFacebook            | function |      -     | function to be called when facebook icon is pressed |
-| onPressTwitter             | function |       -       | function to be called when twitter icon is pressed |
-| onPressInstagram           | function |          -           | function to be called when instagram icon is pressed |
-| position                   | function |          `{bottom: 100, right: 60}`           | Style to update button position |
+| Property         |   Type   |          Default           | Description                                          |
+| ---------------- | :------: | :------------------------: | ---------------------------------------------------- |
+| onPressFacebook  | function |             -              | function to be called when facebook icon is pressed  |
+| onPressTwitter   | function |             -              | function to be called when twitter icon is pressed   |
+| onPressInstagram | function |             -              | function to be called when instagram icon is pressed |
+| position         | function | `{bottom: 100, right: 60}` | Style to update button position                      |
 
 ### ToDos
 
@@ -86,7 +88,7 @@ import FloatingButton  from "react-native-social-fab";
 - [ ] migrate to TypeScript
 - [ ] allow user defined animations
 - [ ] use crazy animations
-                                                      |
+      |
 
 ## Author
 
