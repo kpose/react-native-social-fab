@@ -2,6 +2,14 @@
   "expo": {
     "name": "React-Native-FAB-iOS",
     "slug": "FAB_iOs",
+    "ios": {
+      "bundleIdentifier": "com.kpose.fab",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.kpose.fab",
+      "versionCode": 1
+    },
     "platforms": [
       "ios",
       "android",
@@ -20,9 +28,6 @@
     },
     "assetBundlePatterns": [
       "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    }
+    ]
   }
 }
