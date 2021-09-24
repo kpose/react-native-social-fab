@@ -12,6 +12,7 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import Web from "./Web";
 import { Modalize } from "react-native-modalize";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { heightPercentageToDP as hp } from "react-native-responsive-screen";
 
 interface Props {
   iconSize?: number;
@@ -24,6 +25,7 @@ interface Props {
   facebook?: boolean;
   linkedin?: boolean;
   friction?: number;
+  webHeight?: number;
 }
 
 const FloatingButton = ({
@@ -36,6 +38,7 @@ const FloatingButton = ({
   twitter = true,
   facebook = true,
   linkedin = true,
+  webHeight,
   friction,
 }: Props) => {
   const [all, setAll] = useState(true);
@@ -43,10 +46,6 @@ const FloatingButton = ({
   const [isOpen, setIsOpen] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
   const modalizeRef = useRef<Modalize>(null);
-
-  function LoadingIndicatorView() {
-    return <ActivityIndicator color="#009b88" size="large" />;
-  }
 
   const toggleMenu = () => {
     const toValue = isOpen ? 0 : 1;
@@ -189,8 +188,13 @@ const FloatingButton = ({
           </Pressable>
         </View>
 
-        <Modalize ref={modalizeRef} modalHeight={80}>
-          <Text>hello</Text>
+        <Modalize
+          ref={modalizeRef}
+          modalHeight={hp(webHeight ? webHeight : 90)}
+          //childrenStyle={{ flex: 1, backgroundColor: "red" }}
+          //modalHeight={800}
+        >
+          <Web />
         </Modalize>
       </GestureHandlerRootView>
     </>
