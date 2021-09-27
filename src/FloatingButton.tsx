@@ -6,6 +6,7 @@ import {
   Animated,
   ActivityIndicator,
   Modal,
+  Alert,
   Text,
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
@@ -45,7 +46,10 @@ const FloatingButton = ({
   const animation = useRef(new Animated.Value(0)).current;
   const [isOpen, setIsOpen] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
-  const modalizeRef = useRef<Modalize>(null);
+  const twitterModal = useRef<Modalize>(null);
+  const facebookModal = useRef<Modalize>(null);
+  const linkedinModal = useRef<Modalize>(null);
+  const instagramModal = useRef<Modalize>(null);
 
   const toggleMenu = () => {
     const toValue = isOpen ? 0 : 1;
@@ -64,7 +68,7 @@ const FloatingButton = ({
       {
         translateY: animation.interpolate({
           inputRange: [0, 1],
-          outputRange: [0, -20],
+          outputRange: [0, -5],
         }),
       },
     ],
@@ -82,7 +86,19 @@ const FloatingButton = ({
   };
 
   const onTwitterPress = () => {
-    console.log("llll");
+    twitterModal.current?.open();
+  };
+
+  const onFacebookPress = () => {
+    facebookModal.current?.open();
+  };
+
+  const onInstagramPress = () => {
+    instagramModal.current?.open();
+  };
+
+  const onLinkedinPress = () => {
+    linkedinModal.current?.open();
   };
 
   return (
@@ -93,6 +109,7 @@ const FloatingButton = ({
             <Animated.View style={[styles.iconsContainer, animatedStyle]}>
               {linkedin && (
                 <Pressable
+                  onPress={onLinkedinPress}
                   style={[
                     styles.buttonContainer,
                     {
@@ -111,6 +128,7 @@ const FloatingButton = ({
               )}
               {facebook && (
                 <Pressable
+                  onPress={onFacebookPress}
                   style={[
                     styles.buttonContainer,
                     {
@@ -129,6 +147,7 @@ const FloatingButton = ({
               )}
               {instagram && (
                 <Pressable
+                  onPress={onInstagramPress}
                   style={[
                     styles.buttonContainer,
                     {
@@ -188,6 +207,46 @@ const FloatingButton = ({
             </Pressable>
           </Animated.View>
         </View>
+
+        <Modalize
+          ref={twitterModal}
+          modalHeight={hp(webHeight ? webHeight : 90)}
+        >
+          <Web
+            url="https://twitter.com"
+            close={() => twitterModal.current?.close()}
+          />
+        </Modalize>
+
+        <Modalize
+          ref={facebookModal}
+          modalHeight={hp(webHeight ? webHeight : 90)}
+        >
+          <Web
+            url="https://facebook.com"
+            close={() => facebookModal.current?.close()}
+          />
+        </Modalize>
+
+        <Modalize
+          ref={instagramModal}
+          modalHeight={hp(webHeight ? webHeight : 90)}
+        >
+          <Web
+            url="https://instagram.com"
+            close={() => instagramModal.current?.close()}
+          />
+        </Modalize>
+
+        <Modalize
+          ref={linkedinModal}
+          modalHeight={hp(webHeight ? webHeight : 90)}
+        >
+          <Web
+            url="https://linkedin.com"
+            close={() => linkedinModal.current?.close()}
+          />
+        </Modalize>
       </GestureHandlerRootView>
     </>
   );
