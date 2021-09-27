@@ -81,6 +81,10 @@ const FloatingButton = ({
     ],
   };
 
+  const onTwitterPress = () => {
+    console.log("llll");
+  };
+
   return (
     <>
       <GestureHandlerRootView style={{ flex: 1 }}>
@@ -144,6 +148,7 @@ const FloatingButton = ({
 
               {twitter && (
                 <Pressable
+                  onPress={onTwitterPress}
                   style={[
                     styles.buttonContainer,
                     {
@@ -182,18 +187,7 @@ const FloatingButton = ({
               />
             </Pressable>
           </Animated.View>
-
-          <Pressable onPress={() => modalizeRef.current?.open()}>
-            <Text> open web </Text>
-          </Pressable>
         </View>
-
-        <Modalize
-          ref={modalizeRef}
-          modalHeight={hp(webHeight ? webHeight : 90)}
-        >
-          <Web />
-        </Modalize>
       </GestureHandlerRootView>
     </>
   );
@@ -227,3 +221,12 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
   },
 });
+
+/* 
+<Pressable onPress={() => modalizeRef.current?.open()}>
+  <Text> open web </Text>
+</Pressable> */
+
+/*  <Modalize ref={modalizeRef} modalHeight={hp(webHeight ? webHeight : 90)}>
+   <Web />
+ </Modalize> */

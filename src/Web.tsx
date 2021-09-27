@@ -12,7 +12,7 @@ const Web = () => {
     <View style={styles.container}>
       <WebView
         originWhitelist={["*"]}
-        source={{ uri: "https://google.com" }}
+        source={{ uri: "https://reactnative.dev/" }}
         renderLoading={LoadingIndicatorView}
         style={{ flex: 1, height: hp(90) }}
       />
