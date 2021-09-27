@@ -12,13 +12,9 @@ const Web = () => {
     <View style={styles.container}>
       <WebView
         originWhitelist={["*"]}
-        source={{ uri: "https://facebook.com" }}
+        source={{ uri: "https://google.com" }}
         renderLoading={LoadingIndicatorView}
-        startInLoadingState={true}
-        onError={(syntheticEvent) => {
-          const { nativeEvent } = syntheticEvent;
-          console.warn("WebView error: ", nativeEvent);
-        }}
+        style={{ flex: 1, height: hp(90) }}
       />
     </View>
   );
@@ -29,7 +25,7 @@ export default Web;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //height: 100,
+    height: "100%",
     backgroundColor: "red",
   },
 });

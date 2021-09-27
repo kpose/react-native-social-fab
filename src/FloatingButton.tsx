@@ -191,8 +191,6 @@ const FloatingButton = ({
         <Modalize
           ref={modalizeRef}
           modalHeight={hp(webHeight ? webHeight : 90)}
-          //childrenStyle={{ flex: 1, backgroundColor: "red" }}
-          //modalHeight={800}
         >
           <Web />
         </Modalize>
